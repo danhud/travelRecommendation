@@ -1,0 +1,171 @@
+/* Reset and base layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    background: 
+      linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 59%, rgba(0, 0, 0, 1) 100%),
+      url('./background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* 👈 Important! */
+    background-position: center;
+    font-family: sans-serif;
+  }
+
+  .text-block {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    max-width: 500px;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    font-family: sans-serif;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* spacing between items */
+  }
+  
+  .text-block h2 {
+    font-size: 60px;
+    margin: 0; /* remove default margin */
+  }
+  
+  .text-block p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .text-block button {
+    padding: 12px 12px;
+    font-size: 16px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  
+    border-radius: 8px; /* <-- this rounds the corners */
+    width: auto;        /* important: remove any fixed width */
+    display: inline-block; /* default but ensures natural width */
+  }
+  
+  .text-block button:hover {
+    background-color: #5c5c5c;
+  }
+
+  .vl {
+    border-left: 2px solid rgb(255, 255, 255);
+    height: 40%;
+    position: absolute;
+    left: 3%;
+    top: 100px;
+    display: flex;
+  }
+
+  .social-links {
+    position: absolute;
+    left: 2.5%; /* slight offset from the line */
+    top: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.2);
+    color: #2a4141; /* optional hover color */
+  }
+  
+  /* Navigation Bar Styling */
+  nav {
+    background-color: #1f2f2f;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo area */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Nav links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: opacity 0.2s;
+  }
+  
+  .nav-links a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Search bar */
+  .search-container {
+    background-color: white;
+    border-radius: 999px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-container input {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    border-radius: 999px;
+    width: 220px;
+    font-size: 14px;
+    color: #1f2f2f;
+  }
+  
+  .search-container button {
+    background-color: #006666;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+  
+  .search-container button:hover {
+    background-color: #004d4d;
+  }
+  
