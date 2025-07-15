@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AssFucker</title>
+  <title>TravelBloom</title>
   <link rel="stylesheet" href="./bar.css">
 </head>
 <body>
   <nav>
     <div class="logo-container">
       <img src="plane.png" alt="TravelBloom Logo" class="logo">
-      <h1>AssFucker</h1>
+      <h1>TravelBloom</h1>
     </div>
 
     <ul class="nav-links">
@@ -18,5 +18,31 @@
       <li><a href="./travel_recommendation_contactUs.html">Contact Us</a></li>
     </ul>
   </nav>
+
+  <div class='contact-form'>
+    <h1>Contact Us</h1>
+    <p>Feel free to contact us to know more about your conditions and for treatment methods.</p>
+
+    <form id="contactForm">
+        <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        </div><br>
+        <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        </div><br>
+        <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        </div><br>
+        <button type="submit" onclick="thankyou()">Submit</button>
+    </form>
+    <script>
+        function thankyou(){
+            alert('Thank you for contacting us!')
+        }
+    </script>
+  </div>
 </body>
 </html>
