@@ -48,6 +48,22 @@ function displayResults(results) {
         resultsDiv.appendChild(item);
         return;
     }
+    /* if there are more than two things to print, randomly select two of them */
+    if (results.length > 2) {
+        let temp = [];
+      
+        // Pick first random item and remove it from results
+        let i = Math.floor(Math.random() * results.length);
+        temp.push(results[i]);
+        results.splice(i, 1); // Remove it from the original array
+      
+        // Pick second random item from remaining items
+        let j = Math.floor(Math.random() * results.length);
+        temp.push(results[j]);
+      
+        // Replace original results with the two selected
+        results = temp;
+      }
 
     results.forEach(result => {
         const item = document.createElement('div');
