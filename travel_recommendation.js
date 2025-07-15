@@ -7,7 +7,7 @@ function clearSearch(){
 }
 
 function getResults(){
-    const input = document.getElementById('keywordInput').value.toLowerCase();
+    const input = document.getElementById('keywordInput').value.trim().toLowerCase();
     let results = [];
 
     fetch('travel_recommendation_api.json')
